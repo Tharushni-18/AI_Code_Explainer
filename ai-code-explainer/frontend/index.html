@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Code Explainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>AI Code Explainer</h1>
+    <button id="themeBtn" class="btn secondary small" type="button" aria-label="Toggle theme">🌙 Dark</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <label for="language">Select Language</label>
+      <select id="language">
+        <option value="Java" selected>Java</option>
+        <option value="Python">Python</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+
+      <label for="code">Paste Your Code</label>
+      <textarea id="code" rows="14" maxlength="10000" spellcheck="false"
+                placeholder="Enter your source code here..."></textarea>
+      <div class="counter"><span id="count">0</span> / 10000 characters</div>
+
+      <div class="actions">
+        <button id="explainBtn" class="btn" type="button">Explain Code</button>
+        <button id="clearBtn" class="btn secondary" type="button">Clear</button>
+      </div>
+
+      <div id="loading" class="loading hidden"><span class="spinner"></span> Analyzing your code...</div>
+      <div id="error" class="error hidden" role="alert"></div>
+    </section>
+
+    <section id="result" class="hidden">
+      <div class="result-head">
+        <h2>AI Explanation</h2>
+        <button id="copyAllBtn" class="btn secondary small" type="button">Copy Explanation</button>
+      </div>
+      <div id="sections"></div>
+
+      <div class="card section" id="outputCard">
+        <h3>Output Options</h3>
+        <p class="note">Program Output (predicted by AI from reading the code; the code is never executed)</p>
+        <pre id="programOutputBox"><code id="programOutput"></code></pre>
+        <div class="actions">
+          <button id="outCopy" class="btn secondary" type="button">Copy as Text</button>
+          <button id="outTxt" class="btn secondary" type="button">Download .txt</button>
+          <button id="outMd" class="btn secondary" type="button">Download .md</button>
+          <button id="outPrint" class="btn secondary" type="button">Print / Save as PDF</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
