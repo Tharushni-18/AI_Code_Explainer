@@ -38,7 +38,7 @@ The app **analyzes** code as plain text. It **never executes** submitted code.
 
 ✨ Architecture
 
-![Request flow](docs/architecture.png)
+
 
 ```mermaid
 flowchart TD
@@ -61,25 +61,45 @@ flowchart TD
 
 
 ai-code-explainer/
+
 ├── README.md
+
 ├── .gitignore
+
 ├── docs/
+
 │   └── INTERVIEW_PREP.md
+
 ├── backend/
+
 │   ├── pom.xml
+
 │   └── src/main/
+
 │       ├── java/com/example/codeexplainer/
+
 │       │   ├── CodeExplainerApplication.java
+
 │       │   ├── controller/CodeController.java
+
 │       │   ├── service/AIService.java
+
 │       │   └── model/
+
 │       │       ├── CodeRequest.java
+
 │       │       └── CodeResponse.java
+
 │       └── resources/application.properties
+
 └── frontend/
+
     ├── index.html
+    
     ├── style.css
+    
     └── script.js
+    
 
 
 
@@ -133,13 +153,7 @@ Never commit your API key; add it only in the hosting platform's environment-var
 | Gemini status 429 | Rate limit; wait a minute |
 | Gemini status 404 | Model name changed; update `gemini.model` |
 
-✨ Screenshots
 
-| Light | Dark |
-|---|---|
-| ![Light theme](docs/screenshot-light.png) | ![Dark theme](docs/screenshot-dark.png) |
-
-_Add your screenshots to the `docs/` folder with these names._
 
 ✨ Future Enhancements
 
